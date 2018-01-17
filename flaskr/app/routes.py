@@ -8,4 +8,4 @@ from app import app #app is the member of app package
 @app.route('/index')
 def index():
 	user = {'username':'Hang'}
-	return render_template('index.html',title = 'Home', user = user)
+	return render_template('index.html', user = user)
