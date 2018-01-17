@@ -1,3 +1,4 @@
+from flask import render_template
 from app import app #app is the member of app package
 #which is defined in package imitial file
 
@@ -6,4 +7,5 @@ from app import app #app is the member of app package
 @app.route('/')
 @app.route('/index')
 def index():
-	return "Hello Hang!"
+	user = {'username':'Hang'}
+	return render_template('index.html',title = 'Home', user = user)
